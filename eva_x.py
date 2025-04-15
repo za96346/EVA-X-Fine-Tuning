@@ -99,13 +99,13 @@ class EVA_X(Eva):
     def __init__(self, **kwargs):
         super(EVA_X, self).__init__(**kwargs)
 
-    def forward_features(self, x):
-        x = self.patch_embed(x)
-        x, rot_pos_embed = self._pos_embed(x)
-        for blk in self.blocks:
-            x = blk(x, rope=rot_pos_embed)
-        x = self.norm(x)
-        return x
+    # def forward_features(self, x):
+    #     x = self.patch_embed(x)
+    #     x, rot_pos_embed = self.pos_embed(x)
+    #     for blk in self.blocks:
+    #         x = blk(x, rope=rot_pos_embed)
+    #     x = self.norm(x)
+    #     return x
 
     def forward_head(self, x, pre_logits: bool = False):
         if self.global_pool:
