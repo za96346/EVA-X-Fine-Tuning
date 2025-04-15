@@ -19,3 +19,5 @@ segmentation/ops/build
 *syh*
 reproduce
 *__pycache__*
+eva_x_tiny_patch16_merged520k_mim.pt
+models
